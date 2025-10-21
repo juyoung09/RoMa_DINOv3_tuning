@@ -217,6 +217,10 @@ def evaluate_model(model, test_indices, label_mapping, device, model_name, base_
             img_source = cv2.cvtColor(cv2.imread(os.path.join(pair_dir, 'google.jpg')), cv2.COLOR_BGR2RGB)
             img_target = cv2.cvtColor(cv2.imread(os.path.join(pair_dir, 'kompsat.jpg')), cv2.COLOR_BGR2RGB)
             
+            # 이미지를 512x512로 리사이즈
+            img_source = cv2.resize(img_source, (512, 512))
+            img_target = cv2.resize(img_target, (512, 512))
+            
             h, w = img_source.shape[:2]
             
             # GT Homography 및 GT 좌표 로드
