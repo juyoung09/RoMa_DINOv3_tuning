@@ -134,3 +134,4 @@ Thumbs.db
 processed_refine_data/
 labels/
 models/
+!RoMa_dinov3/romatch/models/
